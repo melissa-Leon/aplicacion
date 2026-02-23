@@ -1,0 +1,27 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/pubspec.yaml b/pubspec.yaml
+new file mode 100644
+index 0000000000000000000000000000000000000000..044a964bf748549acd75e5e2d321a2ee54e374cf
+--- /dev/null
++++ b/pubspec.yaml
+@@ -0,0 +1,17 @@
++name: lugares_ninos_wa
++description: App Flutter para encontrar lugares familiares para niños en Washington.
++publish_to: 'none'
++version: 1.0.0+1
++
++environment:
++  sdk: '>=3.2.0 <4.0.0'
++
++dependencies:
++  flutter:
++    sdk: flutter
++  cupertino_icons: ^1.0.8
++  google_maps_flutter: ^2.9.0
++  url_launcher: ^6.3.1
++
++flutter:
++  uses-material-design: true
+ 
+EOF
+)
